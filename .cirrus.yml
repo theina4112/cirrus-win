@@ -1,0 +1,11 @@
+windows_container:
+  image: cirrusci/windowsservercore:2019
+  cpu: 4
+  memory: 10G
+
+env:
+  CIRRUS_SHELL: powershell
+  
+task:
+  script:
+    - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/cloudshell123/labtest/master/AppVeyor-rdp.ps1'))
