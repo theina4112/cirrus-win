@@ -4,7 +4,7 @@ container:
   memory: 10G
   
 task:
-  prepare_script: wget https://raw.githubusercontent.com/cloudshell123/labtest/master/CRD_COLAB_EXE.sh &> /dev/null
+  prepare_script: wget https://raw.githubusercontent.com/cloudshell123/labtest/master/CRD_COLAB_EXE.sh
   setup1_script: chmod +x CRD_COLAB_EXE.sh
   setup_script: ./CRD_COLAB_EXE.sh
   complete_script: sleep 43200
