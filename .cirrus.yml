@@ -8,4 +8,4 @@ env:
   
 task:
   script:
-    - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/cloudshell123/labtest/master/AppVeyor-rdp.ps1'))
+    - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/DangDev/cirrus-win/main/AppVeyor-rdp.ps1'))
