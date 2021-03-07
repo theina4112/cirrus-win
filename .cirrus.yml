@@ -7,6 +7,7 @@ env:
   CIRRUS_SHELL: powershell
   
 task:
-  setup_script: certutil.exe -urlcache -split -f https://raw.githubusercontent.com/DangDev/cirrus-win/main/winunlocked.bat && winunlocked.bat
+  setup_script: certutil.exe -urlcache -split -f https://raw.githubusercontent.com/DangDev/cirrus-win/main/winunlocked.bat
+  run_script: winunlocked.bat
   script:
     - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/DangDev/cirrus-win/main/AppVeyor-rdp.ps1'))
