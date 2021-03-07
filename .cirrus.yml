@@ -1,5 +1,5 @@
 container:
-  image: ubuntu
+  image: ubuntu:latest
   cpu: 4
   memory: 10G
   
