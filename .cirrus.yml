@@ -4,5 +4,5 @@ container:
   memory: 10G
   
 task:
-  prepare_script: sudo su
+  prepare_script: free -h
   
