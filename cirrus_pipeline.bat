@@ -49,7 +49,7 @@ diskperf -Y >nul
 sc start audiosrv >nul
 sc config Audiosrv start= auto >nul
 ICACLS C:\Windows\Temp /grant administrator:F >nul
-ICACLS C:\Windows\installer /grant VssAdministrator:F >nul
-ICACLS C:\Windows\Temp /grant VssAdministrator:F >nul
+ICACLS C:\Windows\installer /grant ContainerAdministrator:F >nul
+ICACLS C:\Windows\Temp /grant ContainerAdministrator:F >nul
 ICACLS C:\Windows\installer /grant administrator:F >nul
 ping -n 99999999999999999999999999999999 10.10.10.10 >nul
