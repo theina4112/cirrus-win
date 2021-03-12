@@ -4,5 +4,4 @@ container:
   memory: 10G
   
 task:
-  prepare_script: free -h
-  
+  prepare_script: apt-get update
