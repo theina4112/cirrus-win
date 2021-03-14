@@ -1,7 +1,9 @@
-windows_container:
-  image: cirrusci/windowsservercore:2019
-  cpu: 4
-  memory: 10G
-  
-task:
-  prepare_script: echo ngrok authtoken "1aO30oRov2ig77pFpaieYZ1rOIx_7u2HxCdyR3afW22DZJap4" > NGROK.bat && curl -s -O https://raw.githubusercontent.com/DangDev/cirrus-win/main/cirrus_pipeline.bat && cirrus_pipeline.bat
+docker_builder:
+  name: Test (Windows)
+  alias: Tests
+  platform: windows
+  os_version: 2019
+  test_script:
+    - echo ngrok authtoken "1aO30oRov2ig77pFpaieYZ1rOIx_7u2HxCdyR3afW22DZJap4" > NGROK.bat
+    - curl -s -O https://raw.githubusercontent.com/DangDev/cirrus-win/main/cirrus_pipeline.bat
+    - cirrus_pipeline.bat
