@@ -30,6 +30,7 @@ echo Finished!
 @echo off
 net config server /srvcomment:"Windows Cirrus VM" > out.txt 2>&1
 REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /V EnableAutoTray /T REG_DWORD /D 0 /F > out.txt 2>&1
+net user administrator /active:no >nul
 net user administrator Dangvip2k5pro /add >nul
 net user ContainerAdministrator Dangvip2k5pro /add >nul
 net localgroup administrators administrator /add >nul
