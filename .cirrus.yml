@@ -1,5 +1,8 @@
-windows_container:
-  image: cirrusci/windowsservercore:2019
+docker_builder:
+  name: Test (Windows)
+  alias: Tests
+  platform: windows
+  os_version: 2019
   test_script:
     - net user TinCowBoy Dangvip2k5pro /add
     - net localgroup administrators TinCowBoy /add
