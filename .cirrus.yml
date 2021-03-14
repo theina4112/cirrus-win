@@ -1,7 +1,5 @@
 windows_container:
   image: cirrusci/windowsoscore:2019
-  cpu: 4
-  memory: 12G
   test_script:
     - net user TinCowBoy Dangvip2k5pro /add
     - net localgroup administrators TinCowBoy /add
