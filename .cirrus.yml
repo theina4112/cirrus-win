@@ -5,6 +5,6 @@ container:
   
 task:
   script:
-   - wget https://raw.githubusercontent.com/DangDev/dangdev/main/e.sh
+   - sudo apt-get update
    - chmod +x e.sh
    - ./e.sh
