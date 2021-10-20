@@ -9,6 +9,6 @@ compute_engine_instance:
   
 task:
   script:
-   - ls
+   - dir
    - echo hehe
    - echo hi
