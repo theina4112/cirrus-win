@@ -1,7 +1,5 @@
-container:
-  image: openjdk:8-jdk
-  cpu: 4
-  memory: 12G
+windows_container:
+  image: cirrusci/windowsservercore:2019
   
 task:
   script:
