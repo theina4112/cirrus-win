@@ -9,13 +9,6 @@ copy ngrok.exe C:\Windows\System32 >nul
 echo CONNECT NGROK AUTH TOKEN...
 start NGROK.bat >nul
 
-
-echo Check Region for NGROK...
-curl -s ifconfig.me >ip.txt
-set /p IP=<ip.txt
-curl -s "http://api.whoapi.com/?apikey=bde247b641898256b1aaefcd1df201d9&r=geo&domain=&ip=%IP%" >full.txt
-type full.txt | jq -r .geo_cc >region.txt
-type full.txt | jq -r .geo_country >location.txt
 start ngrok tcp --region au 3389
 
 echo Setup Profile...
@@ -28,7 +21,7 @@ net config server /srvcomment:"DiemQuynh" > out.txt 2>&1
 REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /V EnableAutoTray /T REG_DWORD /D 0 /F > out.txt 2>&1
 net user administrator DiemQuynh1 /add >nul
 net localgroup administrators administrator /add >nul
-net user VssAdministrator DiemQuynh1 >nul
+
 echo IP:
 echo User: Administrator
 echo Pass: [Secret]
