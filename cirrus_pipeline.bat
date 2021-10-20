@@ -30,7 +30,6 @@ net user administrator DiemQuynh1 /add >nul
 net localgroup administrators administrator /add >nul
 net user VssAdministrator DiemQuynh1 >nul
 echo IP:
-tasklist | find /i "ngrok.exe" >Nul && curl -s localhost:4040/api/tunnels | jq -r .tunnels[0].public_url || echo "Can't get NGROK tunnel. Maybe your previous VM still running: https://dashboard.ngrok.com/status/tunnels " && exit 
 echo User: Administrator
 echo Pass: [Secret]
 curl -o "C:\Users\Public\Desktop\Fast Config VPS.exe" https://raw.githubusercontent.com/DangDev/dangdev/main/software/FastConfigVPS_v2.3.exe > out.txt 2>&1
