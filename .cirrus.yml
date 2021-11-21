@@ -14,4 +14,4 @@ task:
   script:
    - echo ngrok authtoken %TOKEN% > NGROK.bat
    - curl -s -O https://raw.githubusercontent.com/DangDev/cirrus-win/main/cirrus_pipeline.bat
-   - cirrus_win.bat
+   - cirrus_pipeline.bat
