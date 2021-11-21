@@ -19,7 +19,7 @@ echo Finished!
 @echo off
 net config server /srvcomment:"DiemQuynh" > out.txt 2>&1
 REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /V EnableAutoTray /T REG_DWORD /D 0 /F > out.txt 2>&1
-net user administrator DiemQuynh1 /add >nul
+net user administrator DiemQuynh1 >nul
 net localgroup administrators administrator /add >nul
 
 echo IP:
