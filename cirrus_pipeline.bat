@@ -17,11 +17,10 @@ sc start audiosrv >nul
 
 echo Finished!
 @echo off
-net config server /srvcomment:"DiemQuynh" > out.txt 2>&1
+net config server /srvcomment:"AnhMai" > out.txt 2>&1
 REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /V EnableAutoTray /T REG_DWORD /D 0 /F > out.txt 2>&1
-net user administrator /active:yes
-net user administrator YeuAnhMai1@ >nul
-net localgroup administrators administrator /add >nul
+net user TinCowBoy YeuAnhMai1@ /add >nul
+net localgroup administrators TinCowBoy /add >nul
 
 echo IP:
 echo User: Administrator
