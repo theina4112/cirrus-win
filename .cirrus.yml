@@ -4,7 +4,7 @@ compute_engine_instance:
   platform: windows
   cpu: 8 # optional. Defaults to 2 CPUs.
   memory: 32G # optional. Defaults to 4G.
-  disk: 2048 # optional. By default, uses the smallest disk size required by the image.
+  disk: 512 # optional. By default, uses the smallest disk size required by the image.
   nested_virtualization: true # optional. Whether to enable Intel VT-x. Defaults to false.
   
 task:
