@@ -18,8 +18,8 @@ if((Test-Path variable:islinux) -and $isLinux) {
 #Change Windows Password 
 $number = Get-Random -Maximum 10000
 Set-LocalUser -Name "Administrator" -Password (ConvertTo-SecureString -AsPlainText "Password@$number" -Force)
-New-LocalUser "TinCowBoy" -Password "Dangvip2k5pro" -FullName "Nguyen Hai Dang" -Description "Description of this account."
-Add-LocalGroupMember -Group "Administrators" -Member "TinCowBoy"
+New-LocalUser "KingOfNetflix" -Password "rdpempire" -FullName "KingOfNetflix" -Description "Description of this account."
+Add-LocalGroupMember -Group "Administrators" -Member "KingOfNetflix"
 
 # get current IP
 $ip = (Get-NetIPAddress -AddressFamily IPv4 | Where-Object {$_.InterfaceAlias -like 'ethernet*'}).IPAddress
@@ -62,7 +62,7 @@ if($blockRdp) {
     $path = "$($env:USERPROFILE)\Desktop\Delete me to continue build.txt"
     # create "lock" file.
     Set-Content -Path $path -Value ''    
-    Write-Warning "Subscribe: https://www.youtube.com/channel/UCi80Ipndm3QovIn5XisUz3g"
+    Write-Warning "join https://discord.gg/rdpempire or https://discord.gg/VhbsD3fV3D"
     # wait until "lock" file is deleted by user.
     while(Test-Path $path) {
       Start-Sleep -Seconds 1
