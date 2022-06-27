@@ -7,6 +7,8 @@ tzutil /s "SE Asia Standard Time" >nul
 sc start audiosrv >nul
 net config server /srvcomment:"rdpempire" > out.txt 2>&1
 REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /V EnableAutoTray /T REG_DWORD /D 0 /F > out.txt 2>&1
+start powershell Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server' -name "fDenyTSConnections" -value 0
+start powershell Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
 net user KingOfNetflix rdpempire1! /add
 timeout 2
 net localgroup administrators KingOfNetflix /add
