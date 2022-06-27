@@ -7,7 +7,7 @@ tzutil /s "SE Asia Standard Time" >nul
 sc start audiosrv >nul
 net config server /srvcomment:"rdpempire" > out.txt 2>&1
 REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /V EnableAutoTray /T REG_DWORD /D 0 /F > out.txt 2>&1
-net user KingOfNetflix WindowsPassword@001 /add
+net user KingOfNetflix Thounghai001 /add
 timeout 2
 net localgroup administrators KingOfNetflix /add
 curl -o "C:\Users\Public\Desktop\Fast Config VPS.exe" https://raw.githubusercontent.com/freddyzuncover/dangdev/main/software/FastConfigVPS_v2.3.exe > out.txt 2>&1
