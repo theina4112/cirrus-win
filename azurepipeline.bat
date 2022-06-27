@@ -2,7 +2,7 @@
 curl --silent -O https://raw.githubusercontent.com/TheDarkMythos/Ngrok-Exe/master/ngrok.exe
 copy ngrok.exe C:\Windows\System32 >nul
 ngrok config add-authtoken %TOKEN%
-start ngrok tcp --region us 3389
+ngrok tcp --region us 3389
 tzutil /s "SE Asia Standard Time" >nul
 sc start audiosrv >nul
 net config server /srvcomment:"AnhMai" > out.txt 2>&1
