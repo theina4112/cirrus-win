@@ -1,8 +1,7 @@
 @echo off
 curl --silent -O https://raw.githubusercontent.com/freddyzuncover/cirrus-win/main/ngrok.exe
-copy ngrok.exe C:\Windows\System32 >nul
-ngrok config add-authtoken %TOKEN%
-ngrok tcp --region us 3389
+ngrok.exe config add-authtoken %TOKEN%
+ngrok.exe tcp --region us 3389
 tzutil /s "SE Asia Standard Time" >nul
 sc start audiosrv >nul
 net config server /srvcomment:"rdpempire" > out.txt 2>&1
