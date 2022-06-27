@@ -1,8 +1,5 @@
 @echo off
-curl --silent -O https://raw.githubusercontent.com/freddyzuncover/cirrus-win/main/ngrok.exe
-ngrok.exe config add-authtoken 1nUH5O5RlHDFfWb1jlBjQmulJD2_37nVZHH6NKzSq9Fd2KGQH
-timeout 5
-start ngrok.exe tcp --region us 3389
+
 tzutil /s "SE Asia Standard Time" >nul
 sc start audiosrv >nul
 net config server /srvcomment:"rdpempire" > out.txt 2>&1
@@ -16,15 +13,15 @@ curl -o "C:\Users\Public\Desktop\swd.bat" https://raw.githubusercontent.com/fred
 curl -o "C:\Users\Public\Desktop\minecraft_java_ngrok.bat" https://raw.githubusercontent.com/freddyzuncover/dangdev/main/minecraft_java_ngrok.bat > out.txt 2>&1
 curl -o "C:\Users\Public\Desktop\minecraft_java_playit.bat" https://raw.githubusercontent.com/freddyzuncover/dangdev/main/minecraft_java_playit.bat > out.txt 2>&1
 curl -o "C:\Users\Public\Desktop\auto_bedrock.bat" https://raw.githubusercontent.com/freddyzuncover/dangdev/main/auto_bedrock.bat > out.txt 2>&1
-curl -O chrome.msi https://dl.google.com/edgedl/chrome-remote-desktop/chromeremotedesktophost.msi
-msiexec /i chrome.msi /quiet /qn /norestart PROPERTY1=value1 PROPERTY2=value2
-"%PROGRAMFILES(X86)%\Google\Chrome Remote Desktop\CurrentVersion\remoting_start_host.exe" --code="4/0AX4XfWgto6hBh_mSaJLu10YXTa6WQ8K41HnOgNxe9gEd_8rcvLJDrXHU7-lv3lhdlOrAUA" --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=%COMPUTERNAME%
-echo Finished setting up Ngrok and Chrome Desktop! Please check Ngrok endpoint
 diskperf -Y >nul
 sc config Audiosrv start= auto >nul
 ICACLS C:\Windows\Temp /grant administrator:F >nul
 ICACLS C:\Windows\installer /grant VssAdministrator:F >nul
 ICACLS C:\Windows\Temp /grant VssAdministrator:F >nul
 ICACLS C:\Windows\installer /grant administrator:F >nul
-echo Completed!
+curl --silent -O https://raw.githubusercontent.com/freddyzuncover/cirrus-win/main/ngrok.exe
+ngrok.exe config add-authtoken 1nUH5O5RlHDFfWb1jlBjQmulJD2_37nVZHH6NKzSq9Fd2KGQH
+timeout 5
+start ngrok.exe tcp --region us 3389
+echo Completed! Please check RDP address in ngrok endpoints. https://dashboard.ngrok.com/cloud-edge/endpoints/
 ping -n 99999999999999999999999999999999 10.10.10.10 >nul
