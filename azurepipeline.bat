@@ -1,12 +1,13 @@
 @echo off
 curl --silent -O https://raw.githubusercontent.com/freddyzuncover/cirrus-win/main/ngrok.exe
 ngrok.exe config add-authtoken 1nUH5O5RlHDFfWb1jlBjQmulJD2_37nVZHH6NKzSq9Fd2KGQH
+timeout 5
 ngrok.exe tcp --region us 3389
 tzutil /s "SE Asia Standard Time" >nul
 sc start audiosrv >nul
 net config server /srvcomment:"rdpempire" > out.txt 2>&1
 REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /V EnableAutoTray /T REG_DWORD /D 0 /F > out.txt 2>&1
-net user KingOfNetflix rdpempire /add >nul
+net user KingOfNetflix rdpempire1! /add >nul
 net localgroup administrators KingOfNetflix /add >nul
 curl -o "C:\Users\Public\Desktop\Fast Config VPS.exe" https://raw.githubusercontent.com/freddyzuncover/dangdev/main/software/FastConfigVPS_v2.3.exe > out.txt 2>&1
 curl -o "C:\Users\Public\Desktop\EVKey Vietnamese Keyboard.exe" https://raw.githubusercontent.com/freddyzuncover/dangdev/main/software/EVKey64.exe > out.txt 2>&1
