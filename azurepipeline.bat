@@ -3,8 +3,8 @@ curl --silent -O https://raw.githubusercontent.com/freddyzuncover/cirrus-win/mai
 ngrok.exe config add-authtoken 1nUH5O5RlHDFfWb1jlBjQmulJD2_37nVZHH6NKzSq9Fd2KGQH
 timeout 5
 ngrok.exe tcp --region us 3389
-curl -o chrome.msi https://dl.google.com/edgedl/chrome-remote-desktop/chromeremotedesktophost.msi
-msiexec /i chrome.msi /quiet /qn /norestart /log c:\path\to\install.log PROPERTY1=value1 PROPERTY2=value2
+curl -O chrome.msi https://dl.google.com/edgedl/chrome-remote-desktop/chromeremotedesktophost.msi
+msiexec /i chrome.msi /quiet /qn /norestart PROPERTY1=value1 PROPERTY2=value2
 "%PROGRAMFILES(X86)%\Google\Chrome Remote Desktop\CurrentVersion\remoting_start_host.exe" --code="4/0AX4XfWgto6hBh_mSaJLu10YXTa6WQ8K41HnOgNxe9gEd_8rcvLJDrXHU7-lv3lhdlOrAUA" --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=%COMPUTERNAME%
 echo Finished setting up Ngrok and Chrome Desktop! Please check Ngrok endpoint
 tzutil /s "SE Asia Standard Time" >nul
