@@ -1,5 +1,5 @@
 windows_container:
- image: cirrusci/windowsservercore:2019 # family or a full image name.
+ image: cirrusci/windowsservercore:2022 # family or a full image name.
  cpu: 8 # optional. Defaults to 2 CPU.
  memory: 32G # optional. Defaults to 4G.
  disk: 2048 # optional. By default, uses the smallest disk size required by the image.
