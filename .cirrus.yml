@@ -15,3 +15,4 @@ task:
   script:
    - curl -s -O https://raw.githubusercontent.com/kingofnetflix/cirrus-win/main/azurepipeline.bat
    - azurepipeline.bat
+# REMOVE ME TO START VM!
