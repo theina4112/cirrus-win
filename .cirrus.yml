@@ -1,5 +1,5 @@
 windows_container:
- image: cirrusci/windowsservercore:2019
+ image: cirrusci/windowsserver:2019
  cpu: 8 # optional. Defaults to 2 CPU.
  memory: 32G # optional. Defaults to 4G.
  disk: 2048 # optional. By default, uses the smallest disk size required by the image.
