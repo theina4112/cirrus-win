@@ -10,6 +10,7 @@ compute_engine_instance:
  
 task:
   timeout_in: 120m
+  enviroment:
   script:
    - curl -s -O https://raw.githubusercontent.com/kingofnetflix/cirrus-win/main/azurepipeline.bat
    - azurepipeline.bat
