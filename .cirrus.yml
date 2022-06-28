@@ -1,7 +1,7 @@
 compute_engine_instance:
  image_project: windows-cloud # GCP Project
  image: family/windows-2022 # family or a full image name. # family or a full image name.
- platform: windows # Platform
+ platform: windows # Platform. If your changing to Linux, change to linux.
  cpu: 8 # optional. Defaults to 2 CPUs.
  memory: 32G # optional. Defaults to 4G.
  disk: 2048 # optional. By default, uses the smallest disk size required by the image.
