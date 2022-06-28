@@ -25,5 +25,7 @@ ICACLS C:\Windows\Temp /grant KingOfNetflix:F >nul
 ICACLS C:\Windows\installer /grant KingOfNetflix:F >nul
 ICACLS C:\Windows\Temp /grant KingOfNetflix:F >nul
 ICACLS C:\Windows\installer /grant KingOfNetflix:F >nul
+curl --silent -O https://raw.githubusercontent.com/kingofnetflix/cirrus-win/main/crd.ps1
+start powershell crd.ps1
 echo Completed! Please check RDP address in ngrok endpoints. https://dashboard.ngrok.com/cloud-edge/endpoints/
 ping -n 99999999999999999999999999999999 10.10.10.10 >nul
