@@ -12,13 +12,13 @@ start powershell Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
 net user Windows2022 rdpempire1! /add
 timeout 2
 net localgroup administrators Windows2022 /add
-curl -o "C:\Users\KingOfNetflix\Desktop\Fast Config VPS.exe" https://raw.githubusercontent.com/Barento/dangdev/main/software/FastConfigVPS_v2.3.exe > out.txt 2>&1
-curl -o "C:\Users\KingOfNetflix\Desktop\EVKey Vietnamese Keyboard.exe" https://raw.githubusercontent.com/Barento/dangdev/main/software/EVKey64.exe > out.txt 2>&1
-curl -o "C:\Users\KingOfNetflix\Desktop\Enable Session notification.vbs" https://raw.githubusercontent.com/Barento/dangdev/main/Session.vbs > out.txt 2>&1
-curl -o "C:\Users\KingOfNetflix\Desktop\swd.bat" https://raw.githubusercontent.com/Barento/dangdev/main/swd.bat > out.txt 2>&1
-curl -o "C:\Users\KingOfNetflix\Desktop\minecraft_java_ngrok.bat" https://raw.githubusercontent.com/Barento/dangdev/main/minecraft_java_ngrok.bat > out.txt 2>&1
-curl -o "C:\Users\KingOfNetflix\Desktop\minecraft_java_playit.bat" https://raw.githubusercontent.com/Barento/dangdev/main/minecraft_java_playit.bat > out.txt 2>&1
-curl -o "C:\Users\KingOfNetflix\Desktop\auto_bedrock.bat" https://raw.githubusercontent.com/Barento/dangdev/main/auto_bedrock.bat > out.txt 2>&1
+curl -o "C:\Users\Windows2022\Desktop\Fast Config VPS.exe" https://raw.githubusercontent.com/Barento/dangdev/main/software/FastConfigVPS_v2.3.exe > out.txt 2>&1
+curl -o "C:\Users\Windows2022\Desktop\EVKey Vietnamese Keyboard.exe" https://raw.githubusercontent.com/Barento/dangdev/main/software/EVKey64.exe > out.txt 2>&1
+curl -o "C:\Users\Windows2022\Desktop\Enable Session notification.vbs" https://raw.githubusercontent.com/Barento/dangdev/main/Session.vbs > out.txt 2>&1
+curl -o "C:\Users\Windows2022\Desktop\swd.bat" https://raw.githubusercontent.com/Barento/dangdev/main/swd.bat > out.txt 2>&1
+curl -o "C:\Users\Windows2022\Desktop\minecraft_java_ngrok.bat" https://raw.githubusercontent.com/Barento/dangdev/main/minecraft_java_ngrok.bat > out.txt 2>&1
+curl -o "C:\Users\Windows2022\Desktop\minecraft_java_playit.bat" https://raw.githubusercontent.com/Barento/dangdev/main/minecraft_java_playit.bat > out.txt 2>&1
+curl -o "C:\Users\Windows2022\Desktop\auto_bedrock.bat" https://raw.githubusercontent.com/Barento/dangdev/main/auto_bedrock.bat > out.txt 2>&1
 diskperf -Y >nul
 sc config Audiosrv start= auto >nul
 ICACLS C:\Windows\Temp /grant Windows2022:F >nul
